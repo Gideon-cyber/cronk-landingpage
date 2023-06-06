@@ -14,6 +14,7 @@ import {
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Instrument from "../components/Instrument";
+import About from "../components/About";
 
 export default function Home() {
   const dispatch = useAppDispatch();
@@ -36,6 +37,7 @@ export default function Home() {
         <Header />
         <Hero />
         <Instrument />
+        <About />
       </main>
 
       <footer></footer>

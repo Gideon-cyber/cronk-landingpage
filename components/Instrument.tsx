@@ -38,9 +38,9 @@ const Instrument = () => {
     },
   ];
   return (
-    <div className="w-full py-[3rem] bg-black">
+    <div className="w-full pt-[3rem] pb-[4rem] bg-black">
       <div className="max-w-7xl mx-auto w-full ">
-        <div className="flex flex-col gap-8 text-center w-[90%] md:w-[70%] mx-auto">
+        <div className="flex flex-col gap-8 text-center w-[90%] md:w-[80%] mx-auto">
           <h3 className="font-bold text-[28px] leading-[110%] md:text-[56px] md:leading-[64px]">
             Croge instruments
           </h3>

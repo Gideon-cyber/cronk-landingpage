@@ -21,7 +21,7 @@ const Hero = ({}: Props) => {
   } = useAppSelector((state) => state.users);
 
   return (
-    <div className="max-w-7xl md:h-screen mx-auto w-full py-[3rem] bg-hero-pattern bg-center">
+    <div className="max-w-7xl md:h-screen mx-auto w-full pt-[3rem] pb-[4rem] bg-hero-pattern bg-center">
       <div className="flex items-center flex-col justify-center gap-5 h-full">
         <div className="flex items-center flex-col gap-5 md:gap-0 justify-center md:flex-row w-[90%] md:w-[70%]">
           {/*Left*/}

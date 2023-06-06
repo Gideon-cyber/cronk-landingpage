@@ -3,7 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    domains: ["cryptochanger.to", "content-api.changenow.io"],
+    domains: ["cryptochanger.to", "content-api.changenow.io", "crogecoin.com"],
   },
 };
 

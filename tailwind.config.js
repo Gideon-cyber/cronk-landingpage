@@ -12,7 +12,7 @@ module.exports = {
       },
       fontFamily: {
         Inter: ["Inter", "sans-serif"],
-        Titillium: ["Titillium Web", "sans-serif"],
+        Bebas: ["Bebas Neue", "sans-serif"],
       },
       colors: {
         blackPrim: "#1a1a1a",
@@ -22,6 +22,7 @@ module.exports = {
         whitePrim: "#fcfcfc",
         nearWhite: "#888888",
         primYellow: "#ffffd2",
+        greyPrim: "#ebeef1",
       },
       screens: {
         sm: "480px",

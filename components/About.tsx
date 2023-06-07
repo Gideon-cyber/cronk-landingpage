@@ -1,11 +1,11 @@
 import Image from "next/image";
 import React from "react";
 import AboutImage from "../public/image12.jpeg";
-import Button from "./Button";
+import { Button } from "./Button";
 
-const About = () => {
+export const About = () => {
   return (
-    <div className="w-full pt-[6rem] pb-[7rem] bg-black">
+    <div className="w-full pt-[6rem] pb-[7rem] px-5 md:px-0 bg-black">
       <div className="max-w-7xl mx-auto w-full flex items-center flex-col md:flex-row gap-8">
         <div className="flex items-start flex-col flex-1 gap-5">
           <h2 className="text-[28px] leading-[110%] md:text-[48px] md:leading-[65px] font-bold">
@@ -87,5 +87,3 @@ const About = () => {
     </div>
   );
 };
-
-export default About;

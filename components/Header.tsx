@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { Icon } from "@iconify/react";
-import Button from "./Button";
+import { Button } from "./Button";
 
 type Props = {};
 
-const Header = (props: Props) => {
+export const Header = (props: Props) => {
   const router = useRouter();
   const [open, setOpen] = useState(false);
 
@@ -85,4 +85,4 @@ const Header = (props: Props) => {
   );
 };
 
-export default Header;
+// export default Header;

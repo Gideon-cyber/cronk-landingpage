@@ -9,9 +9,4 @@ export type Coin = {
   ticker?: string;
 };
 
-export type userState = {
-  youSendCoin: Coin;
-  youReceiveCoin: Coin;
-  showCoinsModal: boolean;
-  firstCoinClicked: boolean;
-};
+export type userState = {};

@@ -4,38 +4,15 @@ import type { RootState } from "./store";
 import type { Coin, userState } from "../types";
 
 // Define the initial state using that type
-const initialState: userState = {
-  youSendCoin: {},
-  youReceiveCoin: {},
-  showCoinsModal: false,
-  firstCoinClicked: false,
-};
+const initialState: userState = {};
 
 export const userSlice = createSlice({
   name: "user",
   // `createSlice` will infer the state type from the `initialState` argument
   initialState,
-  reducers: {
-    setSendCoin: (state, action: PayloadAction<Coin>) => {
-      state.youSendCoin = action.payload;
-    },
-    setReceiveCoin: (state, action: PayloadAction<Coin>) => {
-      state.youReceiveCoin = action.payload;
-    },
-    setShowCoinsModal: (state) => {
-      state.showCoinsModal = !state.showCoinsModal;
-    },
-    setFirstCoinClicked: (state, action: PayloadAction<boolean>) => {
-      state.firstCoinClicked = action.payload;
-    },
-  },
+  reducers: {},
 });
 
-export const {
-  setSendCoin,
-  setReceiveCoin,
-  setShowCoinsModal,
-  setFirstCoinClicked,
-} = userSlice.actions;
+export const {} = userSlice.actions;
 
 export default userSlice.reducer;

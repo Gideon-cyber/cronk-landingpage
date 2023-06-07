@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 
-const Instrument = () => {
+export const Instrument = () => {
   const instruments = [
     {
       icon: "https://crogecoin.com/icons/bridge-icon.svg",
@@ -78,5 +78,3 @@ const Instrument = () => {
     </div>
   );
 };
-
-export default Instrument;

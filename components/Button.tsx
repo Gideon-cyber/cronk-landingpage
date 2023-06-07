@@ -7,7 +7,7 @@ type Props = {
   color?: string;
 };
 
-const Button = ({ text, onClick, bg = true, color }: Props) => {
+export const Button = ({ text, onClick, bg = true, color }: Props) => {
   return (
     <button
       className={`rounded-full border-[2px] w-full md:w-auto md:rounded-[8px]  px-11 py-3 flex items-center justify-center whitespace-nowrap ${
@@ -24,5 +24,3 @@ const Button = ({ text, onClick, bg = true, color }: Props) => {
     </button>
   );
 };
-
-export default Button;

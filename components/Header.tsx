@@ -36,21 +36,20 @@ export const Header = (props: Props) => {
               className={`items-center flex flex-col gap-[10px] md:gap-3 md:bg-transparent text-[16px] w-auto md:pt-0 transition-all 
           `}
             >
-              <li className="navItem">
+              <li className="navItem flex items-center gap-5">
                 <Link href="#" className="text-[22px]">
                   <Icon icon="bxl:telegram" />
                 </Link>
-              </li>
-              <li className="navItem">
+
                 <Link href="#" className="text-[22px]">
                   <Icon icon="bxl:discord-alt" />
                 </Link>
-              </li>
-              <li className="navItem">
+
                 <Link href="#" className="text-[22px]">
                   <Icon icon="bxl:twitter" />
                 </Link>
               </li>
+
               <li className="navItem">
                 <Link href="/">Instruments</Link>
               </li>

@@ -5,3 +5,4 @@ export * from "./Instrument";
 export * from "./About";
 export * from "./Buy";
 export * from "./Why";
+export * from "./Footer";

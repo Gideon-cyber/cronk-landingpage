@@ -1,6 +1,14 @@
 import { GetServerSideProps } from "next";
 import Head from "next/head";
-import { Header, Hero, Instrument, About, Why, Buy } from "../components/";
+import {
+  Header,
+  Hero,
+  Instrument,
+  About,
+  Why,
+  Buy,
+  Footer,
+} from "../components/";
 
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -27,7 +35,7 @@ export default function Home() {
         <Why />
       </main>
 
-      <footer></footer>
+      <Footer />
       <ToastContainer autoClose={2000} />
     </div>
   );

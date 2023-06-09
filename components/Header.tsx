@@ -4,18 +4,30 @@ import { useRouter } from "next/router";
 import { Icon } from "@iconify/react";
 import { Button } from "./Button";
 
-type Props = {};
+type Props = {
+  allRefs: any;
+};
 
-export const Header = (props: Props) => {
+export const Header = ({ allRefs }: Props) => {
   const router = useRouter();
   const [open, setOpen] = useState(false);
+
+  const handleScrollToSection = (sectionRef: any) => {
+    sectionRef?.current?.scrollIntoView({ behavior: "smooth" });
+    setOpen(false);
+  };
 
   return (
     <header className="sticky top-[0] py-4 z-[100] w-full bg-blackSec h-full">
       <nav className="flex justify-center items-center max-w-7xl mx-auto py-2 px-5 md:h-[63px] bg-greyPrim backdrop-blur-xl text-blackPrim border border-[#ebeef1] w-[90%] rounded-3xl relative">
         <div className="flex items-center flex-wrap justify-between w-full gap-1 transition-all duration-300">
-          <span className="font-b-600 font-Bebas md:text-[20px]">
-            <Link href="#">Cronkcro</Link>
+          <span
+            className="font-b-600 font-Bebas md:text-[20px] cursor-pointer"
+            onClick={() => handleScrollToSection(allRefs?.heroRef)}
+          >
+            {/* <Link href="#"> */}
+            Cronkcro
+            {/* </Link> */}
           </span>
           <div className="flex items-center gap-1">
             <div
@@ -50,26 +62,44 @@ export const Header = (props: Props) => {
                 </Link>
               </li>
 
-              <li className="navItem">
-                <Link href="/">Instruments</Link>
+              <li
+                className="navItem"
+                onClick={() => handleScrollToSection(allRefs?.instrumentRef)}
+              >
+                {/* <Link href="/#instrument"> */}
+                Instruments
+                {/* </Link> */}
               </li>
-              <li className="navItem">
-                <Link href="/about" className="" style={{}}>
-                  About
-                </Link>
+              <li
+                className="navItem"
+                onClick={() => handleScrollToSection(allRefs?.aboutRef)}
+              >
+                {/* <Link href="/#about" className="" style={{}}> */}
+                About
+                {/* </Link> */}
               </li>
-              <li className="navItem whitespace-nowrap">
-                <Link href="/services">How Buy</Link>
+              <li
+                className="navItem whitespace-nowrap"
+                onClick={() => handleScrollToSection(allRefs?.buyRef)}
+              >
+                {/* <Link href="/#buy"> */}
+                How Buy
+                {/* </Link> */}
               </li>
-              <li className="navItem whitespace-nowrap">
-                <Link href="/services">Why Cronkcro</Link>
+              <li
+                className="navItem whitespace-nowrap"
+                onClick={() => handleScrollToSection(allRefs?.whyRef)}
+              >
+                {/* <Link href="/#why"> */}
+                Why Cronkcro
+                {/* </Link> */}
               </li>
-              <li className="navItem whitespace-nowrap">
+              {/* <li className="navItem whitespace-nowrap">
                 <Link href="/services">Tokonomics</Link>
-              </li>
-              <li className="navItem whitespace-nowrap">
+              </li> */}
+              {/* <li className="navItem whitespace-nowrap">
                 <Link href="/services">Roadmap</Link>
-              </li>
+              </li> */}
 
               {/* <li className=""> */}
               {/* <Link href="/contact"> */}

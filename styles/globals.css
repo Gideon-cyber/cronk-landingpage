@@ -8,7 +8,7 @@
 
 @layer components {
   .navItem {
-    @apply px-[1.2rem] py-[0.8rem] md:px-[0.5rem] md:py-[0.5rem] w-auto hover:font-bold;
+    @apply px-[1.2rem] py-[0.8rem] md:px-[0.5rem] md:py-[0.5rem] w-auto hover:font-bold cursor-pointer;
   }
 
   .blurFilter {

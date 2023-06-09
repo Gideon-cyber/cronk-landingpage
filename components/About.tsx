@@ -76,7 +76,7 @@ export const About = () => {
               </div>
             </div>
 
-            <div className="w-full flex flex-row gap-4">
+            {/* <div className="w-full flex flex-row gap-4">
               <div className="flex items-center justify-center w-[72px] min-w-[72px] h-[72px] bg-blackTert/50 rounded-[12px]">
                 <Image
                   src="https://crogecoin.com/icons/bridge.svg"
@@ -94,7 +94,7 @@ export const About = () => {
                   of the Cronos Blockchain.
                 </p>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
         <div className="flex-1">

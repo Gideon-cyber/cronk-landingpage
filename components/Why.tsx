@@ -2,7 +2,7 @@ import React from "react";
 
 export const Why = () => {
   return (
-    <div className="w-full pt-[6rem] pb-[7rem] px-5 md:px-0 bg-black">
+    <div className="w-full pt-[6rem] pb-[7rem] px-5 bg-black">
       <div className="max-w-7xl mx-auto w-full flex flex-col items-center">
         <h1 className="font-bold text-[28px] leading-[110%] md:text-[48px] md:leading-[65px]">
           NFT Lending Pool

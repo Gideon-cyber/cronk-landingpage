@@ -15,9 +15,10 @@ import "react-toastify/dist/ReactToastify.css";
 
 export default function Home() {
   return (
-    <div
-      className={`h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0 scroll-smooth lg:scrollbar-track-blackPrim lg:scrollbar-thumb-blackTert  lg:scrollbar-thumb-rounded-xl lg:scrollbar-thin text-Inter bg-blackSec text-whitePrim`}
-    >
+    // <div
+    //   className={`h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0 scroll-smooth lg:scrollbar-track-blackPrim lg:scrollbar-thumb-blackTert  lg:scrollbar-thumb-rounded-xl lg:scrollbar-thin text-Inter bg-blackSec text-whitePrim`}
+    // >
+    <div className="overflow-clip text-Inter bg-blackSec text-whitePrim">
       <Head>
         <title>Cronk</title>
         <meta
@@ -25,19 +26,20 @@ export default function Home() {
           content="Website landing page for Cronk, a cryptocurrency exchange."
         />
       </Head>
-
-      <main>
-        <Header />
-        <Hero />
-        <Instrument />
-        <About />
-        <Buy />
-        <Why />
-      </main>
-
+      {/* // <main> */}
+      <Header />
+      <Hero />
+      <Instrument />
+      <About />
+      <Buy />
+      <Why />
       <Footer />
+      {/* // </main> */}
+
       <ToastContainer autoClose={2000} />
     </div>
+
+    // </div>
   );
 }
 

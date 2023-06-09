@@ -4,7 +4,7 @@ import { Button } from "./Button";
 
 export const Buy = () => {
   return (
-    <div className="w-full pt-[6rem] pb-[7rem] px-5 md:px-0 bg-blackTert">
+    <div className="w-full pt-[6rem] pb-[7rem] px-5 bg-blackTert">
       <div className="max-w-7xl mx-auto w-full flex flex-col md:grid md:grid-cols-2 md:auto-rows-fr gap-8">
         <div className="flex items-start flex-col flex-1 gap-5">
           <h1 className="font-bold text-[28px] leading-[110%] md:text-[48px] md:leading-[65px]">

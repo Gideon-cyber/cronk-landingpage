@@ -42,11 +42,11 @@ export const Instrument = () => {
       <div className="max-w-7xl mx-auto w-full ">
         <div className="flex flex-col gap-8 text-center w-[90%] md:w-[80%] mx-auto">
           <h3 className="font-bold text-[28px] leading-[110%] md:text-[56px] md:leading-[64px]">
-            Croge instruments
+            CronkCro instruments
           </h3>
           <span className="font-normal text-base text-[#C4C4C4]">
-            Croge has a variety of features that make it the best place to start
-            trading
+            CronkCro has a variety of features that make it the best place to
+            start trading
           </span>
           <div className="flex flex-col gap-5 lg:max-w-5xl lg:grid lg:grid-cols-3 lg:px-5">
             {instruments.map((instrument, index) => (

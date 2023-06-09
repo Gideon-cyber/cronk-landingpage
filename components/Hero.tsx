@@ -22,8 +22,8 @@ export const Hero = ({}: Props) => {
               worldwide
             </h1>
             <p className="text-[1rem] leading-[1.5rem] md:leading-[32px]">
-              Croge is an open source, peer-to-peer digital asset, on the Cronos
-              blockchain, favored by reptiles worldwide.
+              CronkCro is an open source, peer-to-peer digital asset, on the
+              Cronos blockchain, favored by reptiles worldwide.
             </p>
             <div className="flex items-center flex-col md:flex-row gap-3 w-full">
               <Button text="MORE INFO" onClick={() => {}} bg />

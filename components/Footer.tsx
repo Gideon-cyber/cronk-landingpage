@@ -5,7 +5,7 @@ import React from "react";
 export const Footer = () => {
   return (
     <footer className="w-full bg-blackSec py-[3rem]">
-      <div className="flex items-center flex-col justify-center max-w-7xl mx-auto w-full gap-9 px-5 md:px-0">
+      <div className="flex items-center flex-col justify-center max-w-7xl mx-auto w-full gap-9 px-5">
         <div className="flex items-center justify-between w-full">
           <span className="font-b-600 font-Bebas md:text-[28px]">
             <Link href="#">Cronkcro</Link>

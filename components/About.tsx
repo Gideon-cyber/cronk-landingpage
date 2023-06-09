@@ -1,9 +1,18 @@
 import Image from "next/image";
-import React from "react";
+import React, { useRef } from "react";
 import AboutImage from "../public/image12.jpeg";
 import { Button } from "./Button";
+import { toast } from "react-toastify";
 
 export const About = () => {
+  const addressRef = useRef(null);
+
+  function copyToClipboard2(event: any, textAreaRef: any) {
+    textAreaRef?.current?.select();
+    document.execCommand("copy");
+    event.target.focus();
+    toast.success("Copied to clipboard");
+  }
   return (
     <div className="w-full pt-[6rem] pb-[7rem] px-5 md:px-0 bg-black">
       <div className="max-w-7xl mx-auto w-full flex items-center flex-col md:flex-row gap-8">
@@ -15,14 +24,22 @@ export const About = () => {
             Cronkcro is an open source, peer-to-peer digital asset, on the
             Cronos blockchain, favored by reptiles worldwide.
           </p>
-          <div className="px-8 py-4 flex flex-col bg-blackTert/50 rounded-[10px] backdrop-blur-[2px] md:flex-row md:items-center md:justify-between gap-8">
-            <div className="flex flex-col gap-1 md:text-left">
+          <div className="px-8 py-4 flex flex-col bg-blackTert/50 rounded-[10px] backdrop-blur-[2px] md:flex-row md:items-center md:justify-between gap-8 w-full">
+            <div className="flex flex-col gap-1 md:text-left w-full">
               <h4 className="text-[20px] leading-[27px]">Contract:</h4>
-              <span className="text-[14px] leading-[27px] break-words">
-                0xC4a174cCb5fb54a6721e11e0Ca961e42715023F9
-              </span>
+              <textarea
+                value="0xC4a174cCb5fb54a6721e11e0Ca961e42715023F9"
+                ref={addressRef}
+                className="w-full text-[14px] h-[48px] pt-[10px] pr-4 bg-transparent resize-none"
+                readOnly
+              />
             </div>
-            <div className="flex justify-center bg-blackTert p-3 rounded-lg">
+            <div
+              className="flex justify-center bg-blackTert p-3 rounded-lg cursor-pointer"
+              onClick={(e) => {
+                copyToClipboard2(e, addressRef);
+              }}
+            >
               <Image
                 src="https://crogecoin.com/_next/static/media/copy.c3e43f3d.svg"
                 alt="copy icon"

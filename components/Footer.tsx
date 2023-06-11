@@ -14,7 +14,7 @@ export const Footer = ({ allRefs }: Props) => {
   return (
     <footer className="w-full bg-blackSec py-[3rem]">
       <div className="flex items-center flex-col justify-center max-w-7xl mx-auto w-full gap-9 px-5">
-        <div className="flex items-start justify-between w-full">
+        <div className="flex items-start flex-col md:flex-row gap-4 justify-between w-full">
           <span
             className="font-b-600 font-Bebas md:text-[20px] cursor-pointer flex items-center gap-2"
             onClick={() => handleScrollToSection(allRefs?.heroRef, setOpen)}

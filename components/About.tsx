@@ -16,7 +16,7 @@ export const About = () => {
   return (
     <div className="w-full pt-[6rem] pb-[7rem] px-5 bg-black">
       <div className="max-w-7xl mx-auto w-full flex items-center flex-col md:flex-row gap-8">
-        <div className="flex items-start flex-col flex-1 gap-5">
+        <div className="flex items-start flex-col w-[100%] md:w-[50%] gap-5">
           <h2 className="text-[28px] leading-[110%] md:text-[48px] md:leading-[65px] font-bold">
             About Cronkcro
           </h2>
@@ -50,12 +50,15 @@ export const About = () => {
               />
             </div>
           </div>
-          <Button
+          {/* <Button
             text="Buy CROnk OG NFT on secondary on CROnk's Markets"
             onClick={() => {}}
             bg={false}
             color="#fff"
-          />
+          /> */}
+          <div className="rounded-full border-[2px] w-full md:w-auto md:rounded-[8px]  px-11 py-3 flex items-center justify-center whitespace-nowrap text-[12px] md:text-[16px]">
+            <span>Buy CROnk OG NFT on secondary on CROnk's Markets</span>
+          </div>
           <div className="flex flex-col gap-5">
             <div className="w-full flex flex-row gap-4">
               <div className="flex items-center justify-center w-[72px] min-w-[72px] h-[72px] bg-blackTert/50 rounded-[12px]">
@@ -66,7 +69,7 @@ export const About = () => {
                   height={30}
                 />
               </div>
-              <div className="flex flex-col justify-center gap-2">
+              <div className="flex flex-col justify-center gap-2 w-full">
                 <h4 className="font-bold text-[18px] leading-[26px] md:text-[20px] md:leading-[36px]">
                   Cronk cro: Empowering community building in web3
                 </h4>
@@ -99,7 +102,7 @@ export const About = () => {
             </div> */}
           </div>
         </div>
-        <div className="flex-1">
+        <div className="w-[100%] md:w-[50%]">
           <Image src={AboutImage} alt="about-image" />
         </div>
       </div>

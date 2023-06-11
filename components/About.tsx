@@ -21,8 +21,10 @@ export const About = () => {
             About Cronkcro
           </h2>
           <p className="text-[14px] leading-[24px] text-[#E5E6ED] md:text-[20px] lg:leading-[36px]">
-            Cronkcro is an open source, peer-to-peer digital asset, on the
-            Cronos blockchain, favored by reptiles worldwide.
+            $CROnk is a meme-packed, fun-loving project on the Cronos chain.
+            With community at its heart, it offers cool NFT mint and innovative
+            crypto experiences, all wrapped up in a dank meme culture that
+            everyone can enjoy. $CROnk is not just a token, it's a lifestyle.
           </p>
           <div className="px-8 py-4 flex flex-col bg-blackTert/50 rounded-[10px] backdrop-blur-[2px] md:flex-row md:items-center md:justify-between gap-8 w-full">
             <div className="flex flex-col gap-1 md:text-left w-full">
@@ -49,7 +51,7 @@ export const About = () => {
             </div>
           </div>
           <Button
-            text="WHITEPAPER"
+            text="Buy CROnk OG NFT on secondary on CROnk's Markets"
             onClick={() => {}}
             bg={false}
             color="#fff"
@@ -66,12 +68,12 @@ export const About = () => {
               </div>
               <div className="flex flex-col justify-center gap-2">
                 <h4 className="font-bold text-[18px] leading-[26px] md:text-[20px] md:leading-[36px]">
-                  Cronkcro is the fun and friendly internet currency.
+                  Cronk cro: Empowering community building in web3
                 </h4>
                 <p className="text-[14px] leading-[24px] text-instrument-card-text md:text-[20px] md:leading-[36px]">
-                  Cronkcro sets itself apart from other digital assets with a
-                  new, vibrant community made up of friendly reptiles just like
-                  you.
+                  We strive to assemble users from across all networks to
+                  experience the originality of what CROnk is and what utilities
+                  CROnk has to offer!
                 </p>
               </div>
             </div>

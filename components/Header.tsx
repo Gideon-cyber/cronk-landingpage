@@ -3,6 +3,9 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { Icon } from "@iconify/react";
 import { Button } from "./Button";
+import Logo from "../public/logo.jpeg";
+import Image from "next/image";
+import { handleScrollToSection } from "../utils";
 
 type Props = {
   allRefs: any;
@@ -12,21 +15,17 @@ export const Header = ({ allRefs }: Props) => {
   const router = useRouter();
   const [open, setOpen] = useState(false);
 
-  const handleScrollToSection = (sectionRef: any) => {
-    sectionRef?.current?.scrollIntoView({ behavior: "smooth" });
-    setOpen(false);
-  };
-
   return (
     <header className="sticky top-[0] py-4 z-[100] w-full bg-blackSec h-full">
       <nav className="flex justify-center items-center max-w-7xl mx-auto py-2 px-5 md:h-[63px] bg-greyPrim backdrop-blur-xl text-blackPrim border border-[#ebeef1] w-[90%] rounded-3xl relative">
         <div className="flex items-center flex-wrap justify-between w-full gap-1 transition-all duration-300">
           <span
-            className="font-b-600 font-Bebas md:text-[20px] cursor-pointer"
-            onClick={() => handleScrollToSection(allRefs?.heroRef)}
+            className="font-b-600 font-Bebas md:text-[20px] cursor-pointer flex items-center gap-2"
+            onClick={() => handleScrollToSection(allRefs?.heroRef, setOpen)}
           >
             {/* <Link href="#"> */}
-            Cronkcro
+            <Image src={Logo} alt="logo" width={40} />
+            <span>Cronkcro</span>
             {/* </Link> */}
           </span>
           <div className="flex items-center gap-1">
@@ -64,7 +63,9 @@ export const Header = ({ allRefs }: Props) => {
 
               <li
                 className="navItem"
-                onClick={() => handleScrollToSection(allRefs?.instrumentRef)}
+                onClick={() =>
+                  handleScrollToSection(allRefs?.instrumentRef, setOpen)
+                }
               >
                 {/* <Link href="/#instrument"> */}
                 Instruments
@@ -72,7 +73,9 @@ export const Header = ({ allRefs }: Props) => {
               </li>
               <li
                 className="navItem"
-                onClick={() => handleScrollToSection(allRefs?.aboutRef)}
+                onClick={() =>
+                  handleScrollToSection(allRefs?.aboutRef, setOpen)
+                }
               >
                 {/* <Link href="/#about" className="" style={{}}> */}
                 About
@@ -80,7 +83,7 @@ export const Header = ({ allRefs }: Props) => {
               </li>
               <li
                 className="navItem whitespace-nowrap"
-                onClick={() => handleScrollToSection(allRefs?.buyRef)}
+                onClick={() => handleScrollToSection(allRefs?.buyRef, setOpen)}
               >
                 {/* <Link href="/#buy"> */}
                 How Buy
@@ -88,7 +91,7 @@ export const Header = ({ allRefs }: Props) => {
               </li>
               <li
                 className="navItem whitespace-nowrap"
-                onClick={() => handleScrollToSection(allRefs?.whyRef)}
+                onClick={() => handleScrollToSection(allRefs?.whyRef, setOpen)}
               >
                 {/* <Link href="/#why"> */}
                 Why Cronkcro

@@ -1,14 +1,28 @@
 import { Icon } from "@iconify/react";
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import Logo from "../public/logo.jpeg";
+import { handleScrollToSection } from "../utils";
 
-export const Footer = () => {
+interface Props {
+  allRefs: any;
+}
+
+export const Footer = ({ allRefs }: Props) => {
+  const [open, setOpen] = React.useState(false);
   return (
     <footer className="w-full bg-blackSec py-[3rem]">
       <div className="flex items-center flex-col justify-center max-w-7xl mx-auto w-full gap-9 px-5">
         <div className="flex items-center justify-between w-full">
-          <span className="font-b-600 font-Bebas md:text-[28px]">
-            <Link href="#">Cronkcro</Link>
+          <span
+            className="font-b-600 font-Bebas md:text-[20px] cursor-pointer flex items-center gap-2"
+            onClick={() => handleScrollToSection(allRefs?.heroRef, setOpen)}
+          >
+            {/* <Link href="#"> */}
+            <Image src={Logo} alt="logo" width={40} />
+            <span>Cronkcro</span>
+            {/* </Link> */}
           </span>
           <div className="flex items-center gap-3">
             <Link href="#" className="text-[22px]">

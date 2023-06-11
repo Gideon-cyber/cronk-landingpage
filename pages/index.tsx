@@ -59,7 +59,7 @@ export default function Home() {
         <Why />
       </section>
 
-      <Footer />
+      <Footer allRefs={allRefs} />
       {/* // </main> */}
 
       <ToastContainer autoClose={2000} />

@@ -14,25 +14,42 @@ export const Hero = ({}: Props) => {
   return (
     <div className="max-w-7xl md:h-screen mx-auto w-full pt-[3rem] pb-[4rem] bg-hero-pattern bg-center">
       <div className="flex items-center flex-col justify-center gap-5 h-full">
-        <div className="flex items-center flex-col gap-5 md:gap-0 justify-center md:flex-row w-[90%] md:w-[70%]">
+        <div className="flex items-center flex-col gap-5 justify-center md:flex-row w-[90%] md:w-[70%]">
           {/*Left*/}
           <div className="px-4 md:px-0 flex items-start flex-col gap-5 text-center md:text-left">
             <h1 className="text-[24px] leading-[140%] md:text-[30px] md:leading-[46px] font-bold">
-              CronkCro is a peer-to-peer digital asset favoured by reptiles
-              worldwide
+              WELCOME TO CRONK!
             </h1>
             <p className="text-[1rem] leading-[1.5rem] md:leading-[32px]">
-              CronkCro is an open source, peer-to-peer digital asset, on the
-              Cronos blockchain, favored by reptiles worldwide.
+              Where blockchain innovation, community spirit, and a good laugh
+              merge to redefine the crypto experience
             </p>
-            <div className="flex items-center flex-col md:flex-row gap-3 w-full">
-              <Button text="MORE INFO" onClick={() => {}} bg />
+            {/* <div className="flex items-center flex-col md:flex-row gap-3 w-full">
+              <Button text="Cronk Twitter" onClick={() => {}} bg />
               <Button
-                text="WHITEPAPER"
+                text="Cronk Medium"
                 onClick={() => {}}
                 bg={false}
                 color="#fff"
               />
+            </div> */}
+            <div className="flex items-center flex-col w-full md:flex-row gap-3">
+              <Link
+                href="https://medium.com/@cronktoshicronkamoto"
+                target="_blank"
+                className="rounded-full border-[2px] w-full md:w-auto md:rounded-[8px]  px-11 py-3 flex items-center justify-center whitespace-nowrap gap-2 bg-black border-black"
+              >
+                <Icon icon="bi:medium" />
+                <span className="">Cronk Medium</span>
+              </Link>
+              <Link
+                href="https://twitter.com/cronkcro"
+                target="_blank"
+                className="rounded-full border-[2px] w-full md:w-auto md:rounded-[8px]  px-11 py-3 flex items-center justify-center whitespace-nowrap gap-2"
+              >
+                <Icon icon="bxl:twitter" />
+                <span className="">Cronk Twitter</span>
+              </Link>
             </div>
           </div>
           {/* Right */}

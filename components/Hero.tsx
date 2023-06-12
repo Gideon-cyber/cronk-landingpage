@@ -7,6 +7,7 @@ import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import BackgroundImage from "../public/banner.jpeg";
 import { Button } from "./Button";
+import { motion } from "framer-motion";
 
 type Props = {};
 
@@ -16,7 +17,16 @@ export const Hero = ({}: Props) => {
       <div className="flex items-center flex-col justify-center gap-5 h-full">
         <div className="flex items-center flex-col gap-5 justify-center md:flex-row w-[90%] md:w-[70%]">
           {/*Left*/}
-          <div className="px-4 md:px-0 flex items-start flex-col gap-5 text-center md:text-left">
+          <motion.div
+            initial={{
+              opacity: 0,
+              y: 200,
+            }}
+            transition={{ duration: 1 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="px-4 md:px-0 flex items-start flex-col gap-5 text-center md:text-left"
+          >
             <h1 className="text-[24px] leading-[140%] md:text-[30px] md:leading-[46px] font-bold">
               WELCOME TO CRONK!
             </h1>
@@ -51,11 +61,25 @@ export const Hero = ({}: Props) => {
                 <span className="">Cronk Twitter</span>
               </Link>
             </div>
-          </div>
+          </motion.div>
           {/* Right */}
-          <div className="px-4 flex items-center justify-center">
+          <motion.div
+            initial={{
+              y: -200,
+              opacity: 0,
+            }}
+            transition={{
+              duration: 0.8,
+            }}
+            whileInView={{
+              y: 0,
+              opacity: 1,
+            }}
+            viewport={{ once: true }}
+            className="px-4 flex items-center justify-center"
+          >
             <Image src={BackgroundImage} alt="image" width={700} />
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>

@@ -4,6 +4,7 @@ import Link from "next/link";
 import React from "react";
 import Logo from "../public/logo.jpeg";
 import { handleScrollToSection } from "../utils";
+import { motion } from "framer-motion";
 
 interface Props {
   allRefs: any;
@@ -15,16 +16,43 @@ export const Footer = ({ allRefs }: Props) => {
     <footer className="w-full bg-blackSec py-[3rem]">
       <div className="flex items-center flex-col justify-center max-w-7xl mx-auto w-full gap-9 px-5">
         <div className="flex items-start flex-col md:flex-row gap-4 justify-between w-full">
-          <span
+          <motion.span
             className="font-b-600 font-Bebas md:text-[20px] cursor-pointer flex items-center gap-2"
+            initial={{
+              opacity: 0,
+              x: 100,
+            }}
+            whileInView={{
+              opacity: 1,
+              x: 0,
+            }}
+            transition={{
+              duration: 0.7,
+            }}
+            viewport={{ once: true }}
             onClick={() => handleScrollToSection(allRefs?.heroRef, setOpen)}
           >
             {/* <Link href="#"> */}
             <Image src={Logo} alt="logo" width={40} />
             <span>Cronkcro</span>
             {/* </Link> */}
-          </span>
-          <div className="flex items-start text-[14px] gap-6">
+          </motion.span>
+          <motion.div
+            className="flex items-start text-[14px] gap-6"
+            // initial={{
+            //   opacity: 0,
+            //   x: 100,
+            // }}
+            // whileInView={{
+            //   opacity: 1,
+            //   x: 0,
+            // }}
+            // transition={{
+            //   duration: 0.7,
+            //   delay: 0.3,
+            // }}
+            // viewport={{ once: true }}
+          >
             <div className="flex items-start flex-col text-[14px] gap-4">
               <Link
                 href="https://medium.com/@cronktoshicronkamoto"
@@ -81,8 +109,23 @@ export const Footer = ({ allRefs }: Props) => {
                 <Icon icon="ph:link" />
               </Link>
             </div>
-          </div>
-          <div className="flex items-center gap-3">
+          </motion.div>
+          <motion.div
+            className="flex items-center gap-3"
+            initial={{
+              opacity: 0,
+              x: 100,
+            }}
+            whileInView={{
+              opacity: 1,
+              x: 0,
+            }}
+            transition={{
+              duration: 0.7,
+              delay: 0.5,
+            }}
+            viewport={{ once: true }}
+          >
             <Link
               href="https://t.me/CROnkCoin"
               className="text-[22px]"
@@ -106,7 +149,7 @@ export const Footer = ({ allRefs }: Props) => {
             >
               <Icon icon="bxl:twitter" />
             </Link>
-          </div>
+          </motion.div>
         </div>
         <div className="flex flex-col items-start gap-3 w-full">
           <div className="w-full h-[2px] bg-blackTert"></div>

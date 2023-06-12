@@ -8,17 +8,18 @@ import Picture3 from "../public/picture3.png";
 import Picture4 from "../public/picture4.png";
 import Picture5 from "../public/picture5.png";
 import Picture6 from "../public/picture6.png";
+import { motion } from "framer-motion";
 
 export const Instrument = () => {
   const instruments = [
     {
-      icon: Picture1,
+      icon: Picture5,
       title: "Bridge",
       description:
         "Buy and sell popular digital currencies, keep track of them in the one place.",
     },
     {
-      icon: Picture2,
+      icon: Picture4,
       title: "Bridge to join CROnk",
       description:
         "Swap from any +16 EVM chains on xyFinance to $CROnk! Start farming today!",
@@ -30,12 +31,12 @@ export const Instrument = () => {
         "Enter ANY of the 5 lottery pools CROnk Lotto has to offer! Lottery pools include: CROnk, VVS, TONIC, WCRO, CROGE, PEPE",
     },
     {
-      icon: Picture4,
+      icon: Picture2,
       title: "Chart",
       description: "Here is our live chart for our fellow chart enthusiasts:  ",
     },
     {
-      icon: Picture5,
+      icon: Picture1,
       title: "Meme machine V2 coming soon",
       description: "Stay up to date on our latest updates and news!",
     },
@@ -50,17 +51,36 @@ export const Instrument = () => {
     <div className="w-full pt-[3rem] pb-[4rem] bg-black">
       <div className="max-w-7xl mx-auto w-full ">
         <div className="flex flex-col gap-8 text-center w-[90%] md:w-[80%] mx-auto">
-          <h3 className="font-bold text-[28px] leading-[110%] md:text-[56px] md:leading-[64px]">
+          <motion.h3
+            className="font-bold text-[28px] leading-[110%] md:text-[56px] md:leading-[64px]"
+            initial={{ opacity: 0, x: -100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{
+              duration: 0.5,
+            }}
+            viewport={{ once: true }}
+          >
             The CROnk MEMEcosystem
-          </h3>
-          <span className="font-normal text-base text-[#C4C4C4]">
+          </motion.h3>
+          <motion.span
+            className="font-normal text-base text-[#C4C4C4]"
+            initial={{ opacity: 0, x: 100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{
+              duration: 0.5,
+            }}
+            // viewport={{ once: true }}
+          >
             Experience all of what CROnk has to offer!
-          </span>
+          </motion.span>
           <div className="flex flex-col gap-5 lg:max-w-5xl lg:grid lg:grid-cols-3 lg:px-5">
             {instruments.map((instrument, index) => (
-              <div
+              <motion.div
                 className="h-full p-8 flex flex-col gap-8 bg-blackTert/50 rounded-[10px] backdrop-blur-[2px]"
                 key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 * index }}
               >
                 <div className="flex items-center justify-center">
                   <Image
@@ -112,7 +132,7 @@ export const Instrument = () => {
                     </span>
                   )}
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>

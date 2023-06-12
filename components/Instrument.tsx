@@ -2,39 +2,45 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { Icon } from "@iconify/react";
+import Picture1 from "../public/picture1.png";
+import Picture2 from "../public/picture2.png";
+import Picture3 from "../public/picture3.png";
+import Picture4 from "../public/picture4.png";
+import Picture5 from "../public/picture5.png";
+import Picture6 from "../public/picture6.png";
 
 export const Instrument = () => {
   const instruments = [
     {
-      icon: "https://crogecoin.com/icons/bridge-icon.svg",
+      icon: Picture1,
       title: "Bridge",
       description:
         "Buy and sell popular digital currencies, keep track of them in the one place.",
     },
     {
-      icon: "https://crogecoin.com/icons/cross-icon.svg",
+      icon: Picture2,
       title: "Bridge to join CROnk",
       description:
         "Swap from any +16 EVM chains on xyFinance to $CROnk! Start farming today!",
     },
     {
-      icon: "https://crogecoin.com/icons/dapp-icon.svg",
+      icon: Picture3,
       title: "Enter Lottery",
       description:
         "Enter ANY of the 5 lottery pools CROnk Lotto has to offer! Lottery pools include: CROnk, VVS, TONIC, WCRO, CROGE, PEPE",
     },
     {
-      icon: "https://crogecoin.com/icons/chart-icon.svg",
+      icon: Picture4,
       title: "Chart",
       description: "Here is our live chart for our fellow chart enthusiasts:  ",
     },
     {
-      icon: "https://crogecoin.com/icons/news-icon.svg",
+      icon: Picture5,
       title: "Meme machine V2 coming soon",
       description: "Stay up to date on our latest updates and news!",
     },
     {
-      icon: "https://crogecoin.com/icons/nft-contest-icon.svg",
+      icon: Picture6,
       title: "Staking / Ip farms",
       description:
         "Earn $CROnk in the $CROnk single stake to help build your bag, or provide liquidity to earn $CRO! Only on crodex.app",
@@ -62,20 +68,29 @@ export const Instrument = () => {
                     alt="image"
                     width={100}
                     height={100}
+                    className="object-contain rounded-full"
                   />
                 </div>
                 <div className="flex flex-col gap-4">
                   <h4 className="text-[18px] leading-[120%] font-bold">
                     {instrument.title === "Staking / Ip farms" ? (
-                      <div className="flex items-center gap-3">
-                        <div className="flex items-center gap-2">
+                      <div className="flex items-center justify-center gap-3">
+                        <Link
+                          href="https://swap.crodex.app/#/rewards/boost/single/0x9451617be9DcDd3B4FE3Da1e1d3a10BeCe8Cde77"
+                          className="flex items-center gap-2"
+                          target="_blank"
+                        >
                           <span>Staking</span>
                           <Icon icon="ph:link" />/
-                        </div>
-                        <div className="flex items-center gap-2">
+                        </Link>
+                        <Link
+                          href="https://swap.crodex.app/#/rewards/boost/pair/0xbd71f54e44619a3d93dc9d0588b89063b8ed9dc1"
+                          className="flex items-center gap-2"
+                          target="_blank"
+                        >
                           <span>Ip farms</span>
                           <Icon icon="ph:link" />
-                        </div>
+                        </Link>
                       </div>
                     ) : (
                       instrument.title
@@ -90,6 +105,7 @@ export const Instrument = () => {
                       <Link
                         className="text-white underline"
                         href="https://DEXTools.io"
+                        target="_blank"
                       >
                         DEXTools.io
                       </Link>

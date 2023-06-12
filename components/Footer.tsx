@@ -72,7 +72,11 @@ export const Footer = ({ allRefs }: Props) => {
                 <span>Bridge to CROnk</span>
                 <Icon icon="ph:link" />
               </Link>
-              <Link href="" className="flex items-center gap-2" target="_blank">
+              <Link
+                href="https://swap.crodex.app/#/swap"
+                className="flex items-center gap-2"
+                target="_blank"
+              >
                 <span>Swap/farm cronk</span>
                 <Icon icon="ph:link" />
               </Link>

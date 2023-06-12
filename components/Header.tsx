@@ -68,7 +68,7 @@ export const Header = ({ allRefs }: Props) => {
                 }
               >
                 {/* <Link href="/#instrument"> */}
-                Instruments
+                CROnk MEMEcosystem
                 {/* </Link> */}
               </li>
               <li
@@ -78,7 +78,7 @@ export const Header = ({ allRefs }: Props) => {
                 }
               >
                 {/* <Link href="/#about" className="" style={{}}> */}
-                About
+                About Cronkcro
                 {/* </Link> */}
               </li>
               <li
@@ -86,7 +86,7 @@ export const Header = ({ allRefs }: Props) => {
                 onClick={() => handleScrollToSection(allRefs?.buyRef, setOpen)}
               >
                 {/* <Link href="/#buy"> */}
-                How Buy
+                Swap to Cronk
                 {/* </Link> */}
               </li>
               <li
@@ -94,7 +94,7 @@ export const Header = ({ allRefs }: Props) => {
                 onClick={() => handleScrollToSection(allRefs?.whyRef, setOpen)}
               >
                 {/* <Link href="/#why"> */}
-                Why Cronkcro
+                Lending Pool
                 {/* </Link> */}
               </li>
               {/* <li className="navItem whitespace-nowrap">

@@ -5,7 +5,7 @@ import { Cursor, useTypewriter } from "react-simple-typewriter";
 import Image from "next/image";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import BackgroundImage from "../public/image8.jpeg";
+import BackgroundImage from "../public/banner.jpeg";
 import { Button } from "./Button";
 
 type Props = {};

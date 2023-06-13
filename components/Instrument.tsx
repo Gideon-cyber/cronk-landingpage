@@ -13,13 +13,13 @@ import { motion } from "framer-motion";
 export const Instrument = () => {
   const instruments = [
     {
-      icon: Picture5,
-      title: "Bridge",
+      icon: Picture4,
+      title: "Swap",
       description:
         "Buy and sell popular digital currencies, keep track of them in the one place.",
     },
     {
-      icon: Picture4,
+      icon: Picture5,
       title: "Bridge to join CROnk",
       description:
         "Swap from any +16 EVM chains on xyFinance to $CROnk! Start farming today!",
@@ -109,6 +109,50 @@ export const Instrument = () => {
                           target="_blank"
                         >
                           <span>Ip farms</span>
+                          <Icon icon="ph:link" />
+                        </Link>
+                      </div>
+                    ) : instrument.title === "Swap" ? (
+                      <div className="flex items-center justify-center gap-3">
+                        <Link
+                          href="https://swap.crodex.app/#/rewards/boost/single/0x9451617be9DcDd3B4FE3Da1e1d3a10BeCe8Cde77"
+                          className="flex items-center gap-2"
+                          target="_blank"
+                        >
+                          <span>Swap</span>
+                          <Icon icon="ph:link" />
+                        </Link>
+                      </div>
+                    ) : instrument.title === "Bridge to join CROnk" ? (
+                      <div className="flex items-center justify-center gap-3">
+                        <Link
+                          href="https://app.xy.finance/?fromTokenAddress=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&sourceChainId=56&toTokenAddress=0x35bEC47922B187d819C3d71CE872086F22F60477&targetChainId=25&amount=&slippage=9"
+                          className="flex items-center gap-2"
+                          target="_blank"
+                        >
+                          <span>Bridge to join CROnk</span>
+                          <Icon icon="ph:link" />
+                        </Link>
+                      </div>
+                    ) : instrument.title === "Enter Lottery" ? (
+                      <div className="flex items-center justify-center gap-3">
+                        <Link
+                          href="http://cronklotto.com/"
+                          className="flex items-center gap-2"
+                          target="_blank"
+                        >
+                          <span>Enter Lottery</span>
+                          <Icon icon="ph:link" />
+                        </Link>
+                      </div>
+                    ) : instrument.title === "Chart" ? (
+                      <div className="flex items-center justify-center gap-3">
+                        <Link
+                          href="https://www.dextools.io/app/en/cronos/pair-explorer/0xd7ed2af5729e7ac1c6bbcd31e3f875fa0c40bb46"
+                          className="flex items-center gap-2"
+                          target="_blank"
+                        >
+                          <span>Chart</span>
                           <Icon icon="ph:link" />
                         </Link>
                       </div>

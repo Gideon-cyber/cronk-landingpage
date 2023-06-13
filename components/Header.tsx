@@ -15,6 +15,10 @@ export const Header = ({ allRefs }: Props) => {
   const router = useRouter();
   const [open, setOpen] = useState(false);
 
+  const handleLinkClick = (url: string) => {
+    window.open(url, "_blank");
+  };
+
   return (
     <header className="sticky top-[0] py-4 z-[100] w-full bg-blackSec h-full">
       <nav className="flex justify-center items-center max-w-7xl mx-auto py-2 px-5 md:h-[63px] bg-greyPrim backdrop-blur-xl text-blackPrim border border-[#ebeef1] w-[90%] rounded-3xl relative">
@@ -106,7 +110,13 @@ export const Header = ({ allRefs }: Props) => {
 
               {/* <li className=""> */}
               {/* <Link href="/contact"> */}
-              <Button text="Buy Cron/Cronkcro" bg onClick={() => {}} />
+              <Button
+                text="Buy CROnk on crodex"
+                bg
+                onClick={() => {
+                  handleLinkClick("https://crodex.app/swap");
+                }}
+              />
               {/* </Link> */}
               {/* </li> */}
             </ul>

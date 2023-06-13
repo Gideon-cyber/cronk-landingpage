@@ -25,7 +25,7 @@ export const Hero = ({}: Props) => {
             transition={{ duration: 1 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="px-4 md:px-0 flex items-start flex-col gap-5 text-center md:text-left"
+            className="px-4 md:px-0 flex items-center md:items-start flex-col gap-5 text-center md:text-left"
           >
             <h1 className="text-[24px] leading-[140%] md:text-[30px] md:leading-[46px] font-bold">
               WELCOME TO CRONK!

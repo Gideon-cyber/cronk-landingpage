@@ -110,6 +110,7 @@ export const Footer = ({ allRefs }: Props) => {
                     <Link
                       href="https://app.ebisusbay.com/collection/cronk-og"
                       className="flex items-center gap-2"
+                      target="_blank"
                     >
                       <span>Ebisus bay</span>
                       <Icon icon="ph:link" />
@@ -118,6 +119,7 @@ export const Footer = ({ allRefs }: Props) => {
                     <Link
                       href="https://minted.network/collections/cronos/0xdeb93385ab6ccd19210b447841f25c292ddd5e26"
                       className="flex items-center gap-2"
+                      target="_blank"
                     >
                       <span>Minted</span>
                       <Icon icon="ph:link" />
@@ -126,6 +128,7 @@ export const Footer = ({ allRefs }: Props) => {
                     <Link
                       href="https://moonflow.club/collection/cronos/cronk"
                       className="flex items-center gap-2"
+                      target="_blank"
                     >
                       <span>Moonflow</span>
                       <Icon icon="ph:link" />
@@ -134,6 +137,7 @@ export const Footer = ({ allRefs }: Props) => {
                     <Link
                       href="https://corgistudio.io/collection/6466e893bc44ce19d6cdb2c5"
                       className="flex items-center gap-2"
+                      target="_blank"
                     >
                       <span>Corgi studio</span>
                       <Icon icon="ph:link" />

@@ -4,6 +4,7 @@ import AboutImage from "../public/image12.jpeg";
 import { Button } from "./Button";
 import { toast } from "react-toastify";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export const About = () => {
   const addressRef = useRef(null);
@@ -99,7 +100,7 @@ export const About = () => {
             color="#fff"
           /> */}
           <motion.div
-            className="rounded-full border-[2px] w-full md:w-auto md:rounded-[8px]  px-11 py-3 flex items-center justify-center whitespace-nowrap text-[12px] md:text-[16px]"
+            className="flex items-center gap-2"
             initial={{
               opacity: 0,
               y: 100,
@@ -112,9 +113,23 @@ export const About = () => {
               duration: 0.7,
               delay: 0.9,
             }}
+          ></motion.div>
+          <Link
+            href="https://app.ebisusbay.com/collection/cronk-og"
+            className="rounded-full border-[2px] w-full md:w-auto md:rounded-[8px]  px-11 py-3 flex items-center justify-center whitespace-nowrap text-[12px] md:text-[16px]"
+            target="_blank"
           >
-            <span>Buy CROnk OG NFT on secondary on CROnk's Markets</span>
-          </motion.div>
+            <span>Link to ebisusbay collection</span>
+          </Link>
+
+          <Link
+            href="https://minted.network/collections/cronos/0xdeb93385ab6ccd19210b447841f25c292ddd5e26"
+            className="rounded-full border-[2px] w-full md:w-auto md:rounded-[8px]  px-11 py-3 flex items-center justify-center whitespace-nowrap text-[12px] md:text-[16px]"
+            target="_blank"
+          >
+            <span>Link to minted network collection</span>
+          </Link>
+
           <motion.div
             className="flex flex-col gap-5"
             initial={{

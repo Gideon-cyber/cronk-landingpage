@@ -28,7 +28,7 @@ export const Instrument = () => {
       icon: Picture3,
       title: "Enter Lottery",
       description:
-        "Enter ANY of the 5 lottery pools CROnk Lotto has to offer! Lottery pools include: CROnk, VVS, TONIC, WCRO, CROGE, PEPE",
+        "Enter ANY of the 6 lottery pools CROnk Lotto has to offer! Lottery pools include: CROnk, VVS, TONIC, WCRO, CROGE, PEPE",
     },
     {
       icon: Picture2,

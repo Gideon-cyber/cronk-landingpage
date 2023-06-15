@@ -1,7 +1,7 @@
 import { Icon } from "@iconify/react";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import Logo from "../public/logo.jpeg";
 import { handleScrollToSection } from "../utils";
 import { motion } from "framer-motion";
@@ -12,6 +12,15 @@ interface Props {
 
 export const Footer = ({ allRefs }: Props) => {
   const [open, setOpen] = React.useState(false);
+  const [toolTip, setToolTip] = useState(false);
+  const handleMouseEnter = () => {
+    setToolTip(true);
+  };
+
+  const handleMouseLeave = () => {
+    setToolTip(false);
+  };
+
   return (
     <footer className="w-full bg-blackSec py-[3rem]">
       <div className="flex items-center flex-col justify-center max-w-7xl mx-auto w-full gap-9 px-5">
@@ -87,11 +96,51 @@ export const Footer = ({ allRefs }: Props) => {
                 <Icon icon="ph:link" />
               </Link>
             </div>
-            <div className="flex items-start flex-col text-[14px] gap-4">
-              <Link href="" className="flex items-center gap-2" target="_blank">
+            <div className="flex items-start flex-col text-[14px] gap-4 relative">
+              <div
+                className="flex items-center gap-2"
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+              >
                 <span>Secondary markets</span>
                 <Icon icon="ph:link" />
-              </Link>
+
+                {toolTip && (
+                  <div className=" bg-blackTert rounded-lg p-4 absolute -top-[100%] left-8 w-full h-auto z-10 flex flex-col gap-3">
+                    <Link
+                      href="https://app.ebisusbay.com/collection/cronk-og"
+                      className="flex items-center gap-2"
+                    >
+                      <span>Ebisus bay</span>
+                      <Icon icon="ph:link" />
+                    </Link>
+
+                    <Link
+                      href="https://minted.network/collections/cronos/0xdeb93385ab6ccd19210b447841f25c292ddd5e26"
+                      className="flex items-center gap-2"
+                    >
+                      <span>Minted</span>
+                      <Icon icon="ph:link" />
+                    </Link>
+
+                    <Link
+                      href="https://moonflow.club/collection/cronos/cronk"
+                      className="flex items-center gap-2"
+                    >
+                      <span>Moonflow</span>
+                      <Icon icon="ph:link" />
+                    </Link>
+
+                    <Link
+                      href="https://corgistudio.io/collection/6466e893bc44ce19d6cdb2c5"
+                      className="flex items-center gap-2"
+                    >
+                      <span>Corgi studio</span>
+                      <Icon icon="ph:link" />
+                    </Link>
+                  </div>
+                )}
+              </div>
               <Link
                 href="https://app.xy.finance/?fromTokenAddress=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&sourceChainId=56&toTokenAddress=0x35bEC47922B187d819C3d71CE872086F22F60477&targetChainId=25&amount&slippage=9"
                 className="flex items-center gap-2"
